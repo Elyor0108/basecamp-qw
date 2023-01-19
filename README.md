@@ -12,7 +12,10 @@ tasks, there is a messenger, file uploads and so on
 ## Installation
 with github you can install my_basecamp_2 in ruby on rails(RoR) to your computer
 and you can write me in discord i can help you
-
+### View
+ ctrl + click
+  https://qws-basecamp.herokuapp.com/
+  
 ## Usage
 
  ```shell
