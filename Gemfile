@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.2.0"
+ruby "3.1.3"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
@@ -66,6 +66,7 @@ group :production do
   
   # gem "pg", "~> 1.4"
   # gem 'pg', '~> 1.4', '>= 1.4.5'
+  gem "pg", "~> 1.4"
 end
 group :development do 
 gem "sqlite3", "~> 1.4"
@@ -80,4 +81,5 @@ group :test do
 end
 
 gem "devise", "~> 4.8"
+
 
