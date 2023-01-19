@@ -14,7 +14,7 @@ with github you can install my_basecamp_2 in ruby on rails(RoR) to your computer
 and you can write me in discord i can help you
 ### View
  ctrl + click
-   ```shell
+   ```
      https://qws-basecamp.herokuapp.com/
    ```
 ## Usage
