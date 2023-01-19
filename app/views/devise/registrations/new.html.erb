@@ -1,0 +1,64 @@
+
+<div class="contact-us">
+<h1>Sign up</h1>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "E-mail" %>
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm Password" %>
+    <%= f.submit "Sign up" ,class:"btn btn-info"%>
+  <% end %>
+  <%= link_to "Sign In", new_user_session_path, style: "text-decoration: none;" %>
+</div>
+<style>
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+button {
+  display: block;
+  margin: 0 auto;
+  border-color: #2196F3;
+  color: dodgerblue;
+  line-height: 28pt;
+  padding: 0 20px;
+  background: lightblue;
+  border: 1px solid black;
+}
+button:hover {
+  background: #2196F3;
+  color: white;
+  border: 1px solid black;
+}
+.contact-us {
+  padding: 50px 100px;
+  border: 2px solid dodgerblue;
+}
+
+input {
+  display: block;
+  width: 100%;
+  font-size: 14pt;
+  line-height: 28pt;
+  font-family: "Serif";
+  margin-bottom: 28pt;
+  border-radius: 4px;
+  border: 0.2px solid dodgerblue;
+  min-width: 250px;
+  padding-left: 5px;
+}
+input:focus {
+  border-bottom: 5px solid light;
+}
+::selection {
+  background: #ffc8ff;
+}
+
+</style>

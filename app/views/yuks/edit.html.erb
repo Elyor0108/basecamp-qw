@@ -1,0 +1,14 @@
+<br/>
+<div class="card" style="width: 80%;">
+  <div class="card-header">
+    <h1>Editing yuk</h1>
+  </div>
+  <div class="card-body">
+    <%= render "form", yuk: @yuk %>
+    <br>
+    <div class="row">
+    <%= link_to "Show this yuk", @yuk , class:"allbuttons col-6 text-center" %> 
+    <%= link_to "Back to yuks", yuks_path , class:"allbuttons col-6 text-center"  %>
+      </div>
+  </div>
+</div>

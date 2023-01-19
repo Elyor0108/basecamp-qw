@@ -1,0 +1,27 @@
+<br/>
+<div class="card" style="width: 80%;">
+  <div class="card-header">
+    <h1>New project</h1>
+  </div>
+
+  <div class="card-body">
+    <%= render "form", project: @project %>
+    <br>
+    <div>
+      <%= link_to "Back to projects", projects_path , class:"allbuttons col-3 btn btn-info me-md-2 btn-hover p-1 rounded-pill"%>
+    </div>
+    <style>
+    .card{
+      background: light;
+      border: 0.5px solid ;
+    }
+    .allbuttons{
+    padding-left: 20px;
+    display: block;
+    margin: 0 auto;
+    padding: 0 20px;
+    background: lightblue;
+  }
+    </style>
+  </div>
+</div>

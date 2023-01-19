@@ -1,0 +1,14 @@
+<br/>
+<div class="card" style="width: 80%;">
+  <div class="card-header">
+    <%= render @ishber %>
+  </div>
+
+  <div class="card-body">
+    <div class="row">
+      <%= link_to "Edit this Tasks", edit_ishber_path(@ishber) , class:"allbuttons col-6 text-center" %>
+      <%= link_to "Back to Tasks", ishbers_path , class:"allbuttons  col-6 text-center" %>
+    </div>
+    <%= button_to "Destroy this Tasks", @ishber, method: :delete, class:"btn btn-danger"%>
+  </div>
+</div>

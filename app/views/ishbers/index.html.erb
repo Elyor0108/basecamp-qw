@@ -1,0 +1,32 @@
+<br/>
+<div class="card" style="width: 80%;">
+  <div class="card-header">
+    <h1>Tasks</h1>
+  </div>
+  <div class="card-body">
+  <%= render "form", ishber: @ishber %>
+  <div id="ishbers">
+    <% @ishbers.each do |ishber| %>
+      <%= ishber.title %> <br>
+        <% if ishber.title %>
+        <%= button_to "Delete this tasks", ishber, method: :delete , class:"btn btn-succes btn-hover button rounded-pill p-2 col-3" %> <br>
+        <% end %>  
+    
+    <% end %>
+  </div>
+  <%= link_to "Back", project_path(@ishber.project_id) , class:"allbuttons" %>
+  </div>
+  <style>
+      .card{
+        border: 1px solid #000;
+      }
+      .button{
+        padding-left: 20px;
+        display: block;
+        margin: 0 auto;
+        padding: 0 20px;
+        background: light;
+        border: 1px solid #000;
+      }
+    </style>
+</div>

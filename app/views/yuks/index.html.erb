@@ -1,0 +1,32 @@
+<br/>
+<div class="card" style="width: 80%;">
+  <div class="card-header">
+    <h1>Attachments</h1>
+  </div>
+
+  <div class="card-body">
+    <%= render "form", yuk: @yuk %>
+    <div id="yuks">
+      <% @yuks.each do |yuk| %>
+        <% if yuk.yuker.attached? %>
+        <%= link_to yuk.yuker.filename,  rails_blob_path(yuk.yuker, disposition: "attachment") %> <br>
+      <div class="row">
+        <%= link_to 'Delete', [yuk.project, yuk], 'data-turbo-method': :delete,class: "btn btn-info btn-hover button rounded-pill p-2 more-link col-2 text-center"  %>
+      </div>
+        <br>
+        <% end %>
+      <% end %>
+    </div>
+    <%= link_to "Back", project_path(@project) , class:"allbuttons" %>
+  </div>
+  <style>
+  .button{
+        padding-left: 20px;
+        display: block;
+        margin: 0 auto;
+        padding: 0 20px;
+        background: lightblue;
+        border: 1px solid #000;
+      }
+  </style>
+</div>

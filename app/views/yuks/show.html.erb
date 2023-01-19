@@ -1,0 +1,23 @@
+<div class="card" style="width: 80%;">
+  <div class="card-header">
+    <%= render @yuk %>
+  </div>
+
+  <div class="card-body">
+    <div class="row">
+      <%= link_to "Edit this file", edit_yuk_path(@yuk) , class:"allbuttons col-6 text-center" %>
+      <%= link_to "Back to files", yuks_path , class:"allbuttons col-6 text-center"%>
+    </div>
+    <%= button_to "Destroy this file", @yuk, method: :delete , class:"btn btn-danger btn-hover button rounded-pill p-2 more-link col-2 text-center" %>
+  </div>
+  <style>
+  .button{
+        padding-left: 20px;
+        display: block;
+        margin: 0 auto;
+        padding: 0 20px;
+        background: light;
+        border: 1px solid #000;
+      }
+  </style>
+</div>

@@ -1,0 +1,45 @@
+<div class="all">
+  <br/>
+    <%= form_with(model: project) do |form| %>
+    <% if project.errors.any? %>
+      <div style="color: ">
+        <h2><%= pluralize(project.errors.count, "error") %> 404 Error</h2>
+
+        <ul>
+          <% project.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="mb-3 row">
+      <%= form.label :theme, class: "col-sm-2 col-form-label", style: "display: block" %>
+      <div class="col-sm-10">
+      <%= form.text_field :name, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="mb-3 row">
+      <%= form.label :description, class: "col-sm-2 col-form-label", style: "display: block" %>
+      <div class="col-sm-10">
+      <%= form.text_area :description, class: "form-control" %>
+      </div>
+    </div>
+
+    <%= form.number_field :user_id, id: :project_user_id, value: current_user.id, type: :hidden %>
+
+    <div >
+      <%= form.submit class:"btn btn-info me-md-2 btn-hover button col-3 p-2 rounded-pill" %>
+    </div>
+    <style>
+    .createbutton{
+      color: red;
+    }
+    .button{
+    background: lightblue;
+    color: #000;
+  }
+    </style>
+  <% end %>
+</div>

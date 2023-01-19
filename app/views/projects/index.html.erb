@@ -1,0 +1,60 @@
+<br/>
+<div class="card" style="width: 80%;">
+  <div class="card-header row">
+    <h1 class="col-6" >Projects</h1>
+    <h1 class="col-6 position-absolute top-0 start-100">
+    <%= button_to "Log Out", destroy_user_session_path, class:"btn btn-danger me-md-2 btn-hover butt", method: :delete %>  
+    </h1>
+  </div>
+
+  <div class="card-body">
+    <div id="projects" >
+      <div class="texts">
+        <% @projects.each do |project| %>
+        <%= render project %>
+      </div>
+      <div class="row p-2">
+        <p>
+          <%= link_to "Show this project", project , class:"btn btn-info me-md-2 btn-hover buttons col-4 p-1" %>
+        </p>
+      </div>
+      <% end %>
+    </div>
+
+     <br/>
+     <br/>
+      <%= link_to "New project", new_project_path , class:"btn btn-info me-md-2 btn-hover  buttons col-4 p-1"%>
+      <br/>
+  </div>
+</div>
+<style>
+
+.texts{
+  border-bottom: 1px solid black;
+}
+.button{
+    padding-left: 20px;
+    display: block;
+    margin: 0 auto;
+    padding: 0 20px;
+    background: lightblue;
+    border: 1px solid #000;
+    color: #000;
+  }
+  .buttons{
+    text-align: center;
+    color: #000;
+    margin: 0 auto;
+    padding: 0 20px;
+    background: lightblue;
+    border: 1px solid #000;
+  }
+.card{
+    font-size: 16pt;
+    font-family: "Fjalla One";
+    border: 1px solid #000;    
+  }
+</style>
+
+
+

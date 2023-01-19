@@ -1,0 +1,32 @@
+<br/>
+<div class="card p-3" style="width: 80%;">
+  <%= render @tg %>
+
+  <div class="card-body">
+  <div class="row">
+    <%= link_to "Edit this tg", edit_tg_path(@tg), class:"allbuttons col-6 text-center" %>
+    <%= link_to "Back to tgs", project_tgs_path(@tg.project), class:"allbuttons col-6 text-center" %>
+  </div>
+    <%= button_to "Destroy this tg", @tg, method: :delete , class:"btn btn-info me-md-2 btn-hover buttons p-2" %>
+  <div class="row p-3">
+    <%= render "tgers/form", tger: @tger , class:"allbuttons" %>
+  </div>
+    <br />
+    <% @tgers.each do |tger| %>
+      <p><%= tger.title %></p>
+      <% if tger.title %>
+      <%= button_to "Delete this tg", tger, method: :delete, class:"btn btn-info me-md-2 btn-hover buttons" %>
+      <% end %>
+    <% end %>
+  </div>
+  <style>
+      .buttons{
+        text-align: center;
+        color: #000;
+        margin: 0 auto;
+        padding: 0 20px;
+        background: lightblue;
+      }
+  </style>
+</div>
+

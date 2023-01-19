@@ -1,0 +1,14 @@
+<div class="card" style="width: 80%;">
+  <div class="card-header">
+    <h1>Editing Messages</h1>
+  </div>
+
+  <div class="card-body">
+    <%= render "form", tger: @tger %>
+    <br>
+    <div class="row">
+      <%= link_to "Show this tger", @tger , class:"allbuttons col-6 text-center" %> 
+      <%= link_to "Back to tgers", tgers_path , class:"allbuttons col-6 text-center" %>
+    </div>
+  </div>
+</div>

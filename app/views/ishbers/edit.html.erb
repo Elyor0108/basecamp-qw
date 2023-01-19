@@ -1,0 +1,15 @@
+<br/>
+<div class="card" style="width: 80%;">
+  <div class="card-header">
+    <h1>Edit Task</h1>
+  </div>
+
+  <div class="card-body">
+    <%= render "form", ishber: @ishber %>
+  <br>
+    <div class="row">
+      <%= link_to "Show this Tasks", @ishber, class:"allbuttons col-6 text-center" %>
+      <%= link_to "Back to Tasks", ishbers_path, class:"allbuttons col-6 text-center" %>
+    </div>
+  </div>
+</div>

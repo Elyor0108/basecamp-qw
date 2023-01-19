@@ -1,0 +1,39 @@
+<br/>
+<div class="card" style="width: 80%;">
+  <div class="card-header">
+    <%= render @project %>
+  </div>
+
+  <div class="card-body">
+    <div class="">
+    <%= button_to "Delete this project", @project, method: :delete , class:"btn btn-info btn-hover button rounded-pill p-2 col-3"%>
+    </div>
+    <div class="row">
+      <%= link_to "Edit this project", edit_project_path(@project) , class:"allbuttons col-6" %>
+      <%= link_to "Back to projects", projects_path , class:"allbuttons col-6" %> 
+    </div>
+    <div class="row">
+      <%= link_to "Messages", project_tgs_path(@project) , class:"allbuttons col-4"%>  
+      <%= link_to "Attachments", project_yuks_path(@project) , class:"allbuttons col-4"%>
+      <%= link_to  "To-Dos", project_ishbers_path(@project) , class:"allbuttons col-4"%>
+      </div>
+  </div>
+  <style>
+  .button{
+    padding-left: 20px;
+    display: block;
+    margin: 0 auto;
+    padding: 0 20px;
+    background: lightblue;
+    border: 1px solid #000;
+  }
+  .card{
+    background: light;
+    border: 1px solid #000;
+  }
+  .allbuttons{
+    padding: 20px;
+    text-align: center;
+  }
+  </style>
+</div>
